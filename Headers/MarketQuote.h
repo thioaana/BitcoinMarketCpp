@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-enum ExchangeType {bid, ask};
+enum ExchangeType {bid, ask, unknown};
 using namespace std;
 
 class MarketQuote{
@@ -14,4 +14,5 @@ class MarketQuote{
 
     public:
         MarketQuote(string, string, ExchangeType, double, double);
+        static ExchangeType stringToExcType(string s);
 };

@@ -10,3 +10,9 @@ MarketQuote::MarketQuote(string timestamp,string product, ExchangeType transacti
     this->price = price;
     this->amount = amount;
 }
+
+ExchangeType MarketQuote::stringToExcType(string s){
+    if (s == "ask") return ask;
+    else if (s == "bid") return bid;
+    else return unknown;
+}
